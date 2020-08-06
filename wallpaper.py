@@ -9,7 +9,7 @@ def main():
                     client_secret = config.client_secret,
                     user_agent = config.user_agent)
 
-    subreddit = reddit.subreddit("wallpaper")1
+    subreddit = reddit.subreddit("wallpaper")
     for submission in subreddit.stream.submissions(): #frskip_existing=True
         os.system('wget --trust-server-names -P /home/sean/workspace/ripwalls/images/wallpaper/ {}'.format(submission.url))
 
